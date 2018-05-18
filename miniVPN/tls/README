@@ -1,0 +1,28 @@
+*************************************************
+*
+* tlsserver.c tls server program 
+* tlsclient.c tls client program 
+* cert_server server certificate folder 
+* ca_client   client CA folder
+*
+************************************************
+
+To compile the compile: 
+$ make 
+
+
+Server running instruction:
+$ ./tlsserver
+
+
+Client setup instruction: 
+
+Our tlsserver certificate common name is 'vpnlabserver.com'. 
+To query the tlsserver using hostname, please add the following line to 
+/etc/hosts and change the server_ip to your tlsserver ip address: 
+ 
+server_ip     vpnlabserver.com
+ 
+
+Client running instruction: 
+$ ./tlsclient <server_hostname/server_ip> <port>
